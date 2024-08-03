@@ -61,8 +61,12 @@
               <button class="back-button">Back this project</button>
 
               <button class="bookmark-button">
-                <img src="images/icon-bookmark.svg" alt="bookmark icon" />
-                <span>Bookmark</span>
+                <img
+                  src="images/icon-bookmark.svg"
+                  alt="bookmark icon"
+                  class="bookmark-icon"
+                />
+                <span class="bookmark-text">Bookmark</span>
               </button>
             </div>
           </div>
@@ -130,7 +134,9 @@
 
                 <div class="select-tier-button">
                   <p class="tier-quantity-left">101 <span>left</span></p>
-                  <button class="select-button">Select Reward</button>
+                  <button class="select-button" data-value="bamboostand">
+                    Select Reward
+                  </button>
                 </div>
               </div>
               <!-- black-edition-stand-tier -->
@@ -148,7 +154,9 @@
 
                 <div class="select-tier-button">
                   <p class="tier-quantity-left">64 <span>left</span></p>
-                  <button class="select-button">Select Reward</button>
+                  <button class="select-button" data-value="blackeditionstand">
+                    Select Reward
+                  </button>
                 </div>
               </div>
               <!-- mahogany-special-edition-tier -->
@@ -166,7 +174,12 @@
 
                 <div class="select-tier-button">
                   <p class="tier-quantity-left">0 <span>left</span></p>
-                  <button class="select-button">Select Reward</button>
+                  <button
+                    class="select-button"
+                    data-value="mahoganyspecialedition"
+                  >
+                    Select Reward
+                  </button>
                 </div>
               </div>
             </div>
@@ -190,12 +203,16 @@
               <!-- Modal Option's -->
               <div class="wrapper">
                 <div class="modal-option" id="modal-no-reward">
-                  <label for="no_reward-pledge" class="no-reward-label">
+                  <label
+                    for="no_reward-pledge"
+                    class="no-reward-label pledge-options"
+                  >
                     <input
                       type="radio"
                       name="Pledge"
                       id="no_reward-pledge"
                       value="PledgeWithNoReward"
+                      class="pledge-input"
                     />
                     Pledge with no reward
                   </label>
@@ -221,17 +238,23 @@
               </div>
               <!-- modal-bamboo-stand -->
               <div class="wrapper">
-                <div class="modal-option" id="modal-no-reward">
-                  <label for="bamboo-stand" class="no-reward-label">
+                <div class="modal-option" id="modal-bamboo-stand">
+                  <label
+                    for="bamboo-stand"
+                    class="no-reward-label pledge-options"
+                  >
                     <input
                       type="radio"
                       name="Pledge"
                       id="bamboo-stand"
                       value="BambooStand"
+                      class="pledge-input"
                     />
                     Bamboo Stand <span class="amount">Pledge $25 or more</span>
                   </label>
-                  <p class="modal-option-left">101 <span>left</span></p>
+                  <p class="tier-quantity-left modal-option-left">
+                    101 <span>left</span>
+                  </p>
 
                   <div class="pledge-content">
                     <p class="modal-option-description">
@@ -254,18 +277,24 @@
               </div>
               <!-- Black Edition Stand -->
               <div class="wrapper">
-                <div class="modal-option" id="modal-no-reward">
-                  <label for="black-edition-stand" class="no-reward-label">
+                <div class="modal-option" id="modal-black-edition">
+                  <label
+                    for="black-edition-stand"
+                    class="no-reward-label pledge-options"
+                  >
                     <input
                       type="radio"
                       name="Pledge"
                       id="black-edition-stand"
                       value="BlackEditionStand"
+                      class="pledge-input"
                     />
                     Black Edition Stand
                     <span class="amount"> Pledge $75 or more</span>
                   </label>
-                  <p class="modal-option-left">64 <span>left</span></p>
+                  <p class="tier-quantity-left modal-option-left">
+                    64 <span>left</span>
+                  </p>
 
                   <div class="pledge-content">
                     <p class="modal-option-description">
@@ -288,18 +317,24 @@
               </div>
               <!-- Mahogany Special Edition -->
               <div class="wrapper">
-                <div class="modal-option" id="modal-no-reward">
-                  <label for="mahogany-special-edition" class="no-reward-label">
+                <div class="modal-option" id="modal-mahogany-special">
+                  <label
+                    for="mahogany-special-edition"
+                    class="no-reward-label pledge-options"
+                  >
                     <input
                       type="radio"
                       name="Pledge"
                       id="mahogany-special-edition"
                       value="MahoganySpecialEdition"
+                      class="pledge-input"
                     />
                     Mahogany Special Edition
                     <span class="amount"> Pledge $200 or more</span>
                   </label>
-                  <p class="modal-option-left">0 <span>left</span></p>
+                  <p class="tier-quantity-left modal-option-left">
+                    0 <span>left</span>
+                  </p>
 
                   <div class="pledge-content">
                     <p class="modal-option-description">
@@ -340,6 +375,6 @@
         <div class="overlay hidden"></div>
       </section>
     </main>
-    <script src=""></script>
+    <script src="script.js"></script>
   </body>
 </html>
