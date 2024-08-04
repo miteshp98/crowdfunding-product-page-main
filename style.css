@@ -137,15 +137,6 @@ h1 {
   width: 100%;
 }
 
-.clicked {
-  color: var(--Darkcyan);
-  background-color: #f2f2f2;
-}
-
-.back--active {
-  background: var(--Darkcyan);
-}
-
 /* Project Summry Section */
 .funding-info {
   width: 100%;
@@ -188,10 +179,11 @@ h1 {
 }
 
 .complete-bar {
-  width: 50%;
+  width: 0%;
   background-color: var(--Moderatecyan);
   height: 15px;
   border-radius: 50px;
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 /* About Section */
@@ -254,13 +246,13 @@ h4 {
 }
 
 .tier-quantity-left {
-  font-size: 1.5em;
-  font-weight: 700;
+  font-weight: 400;
+  color: var(--Darkgray);
 }
 .tier-quantity-left > span {
-  font-weight: 400;
-  font-size: 0.5em;
-  color: var(--Darkgray);
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--Black);
 }
 
 .select-button {
@@ -291,6 +283,7 @@ h4 {
   border: 1px solid hsla(0, 0%, 48%, 0.19);
   border-radius: 10px;
   padding: 2.3rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .modal-close-button {
@@ -325,7 +318,7 @@ h4 {
   padding: 2rem;
 }
 
-.no-reward-label {
+.pledge-options {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -335,7 +328,7 @@ h4 {
   width: max-content;
 }
 
-.no-reward-label:hover {
+.pledge-options:hover {
   color: var(--Moderatecyan);
 }
 
@@ -358,7 +351,7 @@ input[type="radio"]:checked {
   margin: 1.5rem 0px 1rem 35px;
 }
 
-.modal-pledge-input {
+.pledge-input-wrapper {
   height: 0px;
   overflow: hidden;
   display: flex;
@@ -368,11 +361,7 @@ input[type="radio"]:checked {
   transition: all 0.2s ease-in-out;
 }
 
-.expand {
-  height: 100px;
-}
-
-.modal-pledge-input > p {
+.pledge-input-wrapper > p {
   color: var(--Darkgray);
   font-size: 1.1em;
   padding-inline: 40px;
@@ -434,13 +423,6 @@ input::-webkit-inner-spin-button {
   position: absolute;
   right: 2rem;
   top: 25px;
-  font-weight: 700;
-}
-
-.modal-option-left > span {
-  font-weight: 400;
-  font-size: 0.6em;
-  color: var(--Darkgray);
 }
 
 /* Thank You success Message */
@@ -460,6 +442,7 @@ input::-webkit-inner-spin-button {
   gap: 25px;
   padding: 3rem;
   border-radius: 10px;
+  transition: all 0.2s ease-in-out;
 }
 
 .success-img-wrap > img {
@@ -488,6 +471,18 @@ input::-webkit-inner-spin-button {
   font-weight: 700;
 }
 
+.got-it-btn,
+.modal-continue-button,
+.select-button {
+  transition: all 0.2s ease-in-out;
+}
+
+.got-it-btn:hover,
+.modal-continue-button:hover,
+.select-button:hover {
+  background-color: var(--Darkcyan);
+}
+
 .overlay {
   width: 100%;
   height: 100%;
@@ -498,7 +493,10 @@ input::-webkit-inner-spin-button {
   transform: translate(-50%, -50%);
   opacity: 0.7;
   z-index: 1;
+  transition: all 0.2s ease-in-out;
 }
+
+/* Afte Click Button Style Change CSS */
 
 .disabled {
   pointer-events: none;
@@ -507,10 +505,57 @@ input::-webkit-inner-spin-button {
 }
 
 .hidden {
-  display: none;
+  /* display: none; */
+  height: 0;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+  border: none;
+  /* z-index: -1111; */
+}
+
+.active-border {
+  border-color: var(--Moderatecyan);
+}
+
+.active-color {
+  color: var(--Moderatecyan);
+}
+
+.clicked {
+  color: var(--Darkcyan);
+  background-color: #f2f2f2;
+}
+
+.back--active {
+  background: var(--Darkcyan);
+}
+
+.expand {
+  height: 100px;
 }
 
 .modal::-webkit-scrollbar {
   display: none;
   scrollbar-width: none;
+}
+
+.invalid {
+  border-color: red;
+}
+
+.out-of-stock {
+  background-color: var(--Darkgray) !important;
+}
+
+.error {
+  display: none;
+  margin-top: 1.5rem;
+  color: red;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.show-error {
+  display: block;
 }
