@@ -26,6 +26,10 @@
           </a>
         </div>
 
+        <button class="nav-toggle">
+          <img src="images/icon-hamburger.svg" alt="" />
+        </button>
+
         <nav>
           <ul class="nav-list">
             <li class="nav-item">
@@ -76,21 +80,21 @@
             <div class="funding-info">
               <!-- Funding Amount Wrap -->
               <div class="funding-amount">
-                <p class="total-amount">$65,000</p>
-                <p>of $100,000 backed</p>
+                <p class="total-amount">$50,000</p>
+                <p class="word">of $100,000 backed</p>
               </div>
 
               <div class="border-line"></div>
               <!-- Backers Count -->
               <div class="backers-count">
                 <p class="total-count">3500</p>
-                <p>total backers</p>
+                <p class="word">total backers</p>
               </div>
               <div class="border-line"></div>
               <!-- Days Left -->
               <div class="days-left">
                 <p class="days">50</p>
-                <p>days left</p>
+                <p class="word">days left</p>
               </div>
             </div>
 
@@ -103,7 +107,7 @@
           <div class="about-container flex-column">
             <!-- Content -->
             <div class="about-content">
-              <h2>About this project</h2>
+              <h3>About this project</h3>
               <p class="about-description">
                 The Mastercraft Bamboo Monitor Riser is a sturdy and stylish
                 platform that elevates your screen to a more comfortable viewing
@@ -134,7 +138,7 @@
 
                 <div class="select-tier-button">
                   <p class="tier-quantity-left">
-                    <span class="product-stock">101</span> left
+                    <span class="product-stock"></span> left
                   </p>
                   <button class="select-button" data-value="bamboostand">
                     Select Reward
@@ -156,7 +160,7 @@
 
                 <div class="select-tier-button">
                   <p class="tier-quantity-left">
-                    <span class="product-stock">64</span> left
+                    <span class="product-stock"></span> left
                   </p>
                   <button class="select-button" data-value="blackeditionstand">
                     Select Reward
@@ -164,7 +168,7 @@
                 </div>
               </div>
               <!-- mahogany-special-edition-tier -->
-              <div class="contribution-tier disabled">
+              <div class="contribution-tier">
                 <div class="tier-title">
                   <h4>Mahogany Special Edition</h4>
                   <p class="pledge-amount">Pledge $200 or more</p>
@@ -178,10 +182,10 @@
 
                 <div class="select-tier-button">
                   <p class="tier-quantity-left">
-                    <span class="product-stock">0</span> left
+                    <span class="product-stock"></span> left
                   </p>
                   <button
-                    class="select-button out-of-stock"
+                    class="select-button"
                     data-value="mahoganyspecialedition"
                   >
                     Select Reward
@@ -193,7 +197,7 @@
         </div>
 
         <!-- Back this Project Modal -->
-        <div class="modal hidden">
+        <div class="modal">
           <button class="modal-close-button">
             <img src="images/icon-close-modal.svg" alt="" />
           </button>
@@ -240,7 +244,7 @@
                     <input
                       type="number"
                       class="modal-pledge-amount"
-                      data-value=""
+                      data-value="0"
                     />
                     <span class="dollar-sign">$</span>
                     <button class="modal-continue-button">Continue</button>
@@ -261,17 +265,20 @@
                       value="BambooStand"
                       class="pledge-input"
                     />
-                    Bamboo Stand <span class="amount">Pledge $25 or more</span>
+                    <span class="text">
+                      Bamboo Stand
+                      <span class="amount">Pledge $25 or more</span></span
+                    >
                   </label>
-                  <p class="tier-quantity-left modal-option-left">
-                    <span class="dialogue-stock">101</span> left
-                  </p>
 
                   <div class="pledge-content">
                     <p class="modal-option-description">
                       You get an ergonomic stand made of natural bamboo. You've
                       helped us launch our promotional campaign, and you’ll be
                       added to a special Backer member list.
+                    </p>
+                    <p class="tier-quantity-left modal-option-left">
+                      <span class="dialogue-stock"></span> left
                     </p>
                     <span class="error"></span>
                   </div>
@@ -284,7 +291,7 @@
                     <input
                       type="number"
                       class="modal-pledge-amount"
-                      data-value=""
+                      data-value="25"
                     />
                     <span class="dollar-sign">$</span>
                     <button class="modal-continue-button">Continue</button>
@@ -305,18 +312,20 @@
                       value="BlackEditionStand"
                       class="pledge-input"
                     />
-                    Black Edition Stand
-                    <span class="amount"> Pledge $75 or more</span>
+                    <span class="text">
+                      Black Edition Stand
+                      <span class="amount"> Pledge $75 or more</span></span
+                    >
                   </label>
-                  <p class="tier-quantity-left modal-option-left">
-                    <span class="dialogue-stock">64</span> left
-                  </p>
 
                   <div class="pledge-content">
                     <p class="modal-option-description">
                       You get a Black Special Edition computer stand and a
                       personal thank you. You’ll be added to our Backer member
                       list. Shipping is included.
+                    </p>
+                    <p class="tier-quantity-left modal-option-left">
+                      <span class="dialogue-stock"></span> left
                     </p>
                     <span class="error"></span>
                   </div>
@@ -329,7 +338,7 @@
                     <input
                       type="number"
                       class="modal-pledge-amount"
-                      data-value=""
+                      data-value="75"
                     />
                     <span class="dollar-sign">$</span>
                     <button class="modal-continue-button">Continue</button>
@@ -337,7 +346,7 @@
                 </div>
               </div>
               <!-- Mahogany Special Edition -->
-              <div class="wrapper disabled" id="modal-mahogany-special">
+              <div class="wrapper" id="modal-mahogany-special">
                 <div class="modal-option">
                   <label
                     for="mahogany-special-edition"
@@ -350,18 +359,20 @@
                       value="MahoganySpecialEdition"
                       class="pledge-input"
                     />
-                    Mahogany Special Edition
-                    <span class="amount"> Pledge $200 or more</span>
+                    <span class="text">
+                      Mahogany Special Edition
+                      <span class="amount"> Pledge $200 or more</span></span
+                    >
                   </label>
-                  <p class="tier-quantity-left modal-option-left">
-                    <span class="dialogue-stock">0</span> left
-                  </p>
 
                   <div class="pledge-content">
                     <p class="modal-option-description">
                       You get two Special Edition Mahogany stands, a Backer
                       T-Shirt, and a personal thank you. You’ll be added to our
                       Backer member list. Shipping is included.
+                    </p>
+                    <p class="tier-quantity-left modal-option-left">
+                      <span class="dialogue-stock"></span> left
                     </p>
                     <span class="error"></span>
                   </div>
@@ -374,7 +385,7 @@
                     <input
                       type="number"
                       class="modal-pledge-amount"
-                      data-value=""
+                      data-value="200"
                     />
                     <span class="dollar-sign">$</span>
                     <button class="modal-continue-button">Continue</button>
@@ -385,8 +396,9 @@
             <!-- Modal Option End's -->
           </div>
         </div>
+
         <!-- Thank You Modal -->
-        <div class="thank-you-modal hidden">
+        <div class="thank-you-modal">
           <div class="success-img-wrap">
             <img src="images/icon-check.svg" alt="" />
           </div>
@@ -398,9 +410,10 @@
           </p>
           <button class="got-it-btn">Got it!</button>
         </div>
-        <div class="overlay hidden"></div>
+        <!-- <div class="overlay"></div> -->
       </section>
     </main>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="app.js"></script>
   </body>
 </html>
