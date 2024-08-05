@@ -28,6 +28,10 @@ header {
   padding: 2rem 2rem 25rem;
 }
 
+.nav-toggle {
+  display: none;
+}
+
 .header-container {
   width: 90%;
   margin: 0 auto;
@@ -72,6 +76,10 @@ header {
   position: relative;
 }
 
+.project-summary {
+  height: 220px;
+}
+
 .flex-column {
   flex-direction: column;
 }
@@ -86,7 +94,7 @@ header {
 h1 {
   margin-top: 25px;
   text-align: center;
-  font-size: clamp(1.5em, 2.5vw, 2.3em);
+  font-size: clamp(1.5em, 2vw, 2.2em);
 }
 
 .hero-section > p {
@@ -179,7 +187,8 @@ h1 {
 }
 
 .complete-bar {
-  width: 0%;
+  max-width: 100%;
+  width: 65%;
   background-color: var(--Moderatecyan);
   height: 15px;
   border-radius: 50px;
@@ -277,13 +286,17 @@ h4 {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 11;
+  transform: translate(-50%, -50%) scale(0.95);
+  z-index: 3;
   margin: 0 auto;
-  border: 1px solid hsla(0, 0%, 48%, 0.19);
+  border: none;
+  outline: none;
   border-radius: 10px;
   padding: 2.3rem;
+  box-shadow: 0 0 50rem 50rem rgba(0, 0, 0, 0.5);
   transition: all 0.2s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
 }
 
 .modal-close-button {
@@ -326,6 +339,11 @@ h4 {
   font-size: 1.05em;
   cursor: pointer;
   width: max-content;
+}
+
+.modal-option-description {
+  line-height: 30px;
+  color: var(--Darkgray);
 }
 
 .pledge-options:hover {
@@ -413,6 +431,12 @@ input::-webkit-inner-spin-button {
   background: var(--Moderatecyan);
 }
 
+.text {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
 .amount {
   color: var(--Moderatecyan);
   font-weight: 600;
@@ -432,8 +456,8 @@ input::-webkit-inner-spin-button {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 11;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 3;
   background: white;
   display: flex;
   flex-direction: column;
@@ -441,8 +465,13 @@ input::-webkit-inner-spin-button {
   justify-content: center;
   gap: 25px;
   padding: 3rem;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  outline: none;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 0 50rem 50rem rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  transition: all 0.2s ease-in-out;
 }
 
 .success-img-wrap > img {
@@ -483,7 +512,7 @@ input::-webkit-inner-spin-button {
   background-color: var(--Darkcyan);
 }
 
-.overlay {
+/* .overlay {
   width: 100%;
   height: 100%;
   background: black;
@@ -493,8 +522,12 @@ input::-webkit-inner-spin-button {
   transform: translate(-50%, -50%);
   opacity: 0.7;
   z-index: 1;
-  transition: all 0.2s ease-in-out;
-}
+  display: block;
+  transition: all 0.5s ease-in-out;
+  backdrop-filter: blur(100px);
+} */
+
+/* Media query  */
 
 /* Afte Click Button Style Change CSS */
 
@@ -504,14 +537,10 @@ input::-webkit-inner-spin-button {
   transition: all 0.5s ease-in-out;
 }
 
-.hidden {
-  /* display: none; */
-  height: 0;
-  padding: 0;
-  opacity: 0;
-  overflow: hidden;
-  border: none;
-  /* z-index: -1111; */
+.open {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: all;
 }
 
 .active-border {
@@ -558,4 +587,266 @@ input::-webkit-inner-spin-button {
 
 .show-error {
   display: block;
+}
+
+@media screen and (max-width: 1440px) {
+  .total-amount,
+  .total-count,
+  .days {
+    font-size: 2em;
+  }
+
+  h4 {
+    font-size: 1.2em;
+  }
+
+  .modal-title {
+    font-size: 1.3em;
+  }
+  .pledge-input-wrapper > p {
+    font-size: 0.95em;
+  }
+
+  .hero-button > button {
+    transform: scale(0.9);
+  }
+
+  .select-button {
+    width: 200px;
+    height: 45px;
+  }
+
+  .modal-pledge-amount,
+  .modal-continue-button {
+    width: 120px;
+    height: 45px;
+    padding: 10px 35px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 75vw;
+  }
+
+  .modal {
+    width: 80vw;
+  }
+
+  .modal-pledge-amount {
+    font-weight: 700;
+    font-size: 0.95em;
+  }
+  .tier-quantity-left {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    background: url(images/image-hero-mobile.jpg) no-repeat;
+  }
+
+  .container {
+    width: 90vw;
+  }
+
+  .nav-toggle {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+  }
+
+  nav {
+    height: 160px;
+    width: 80%;
+    position: absolute;
+    background: white;
+    top: 70px;
+    border-radius: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 50rem 50rem rgba(0, 0, 0, 0.355);
+    z-index: 3;
+    display: none;
+  }
+
+  .toggle {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+  }
+
+  .nav-item {
+    padding: 1rem;
+    font-weight: 600;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.181);
+  }
+
+  .nav-item:nth-child(3) {
+    border: none;
+  }
+
+  .nav-link {
+    width: 100%;
+    color: var(--Black);
+  }
+
+  .container {
+    width: 80vw;
+  }
+
+  h1 {
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  .hero-section > p {
+    text-wrap: balance;
+    font-size: 0.85em;
+  }
+
+  .total-amount,
+  .total-count,
+  .days {
+    font-size: 1.8em;
+    text-align: center;
+  }
+
+  .about-description {
+    font-size: 0.95em;
+  }
+
+  .project-summary {
+    height: 100%;
+  }
+
+  .funding-info {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .border-line {
+    content: "";
+    width: 85px;
+    height: 1px;
+    background-color: var(--Darkgray);
+    opacity: 0.4;
+  }
+
+  .word {
+    font-size: 0.9em;
+  }
+  .input-wrap {
+    display: flex;
+    align-content: center;
+  }
+
+  .pledge-input-wrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .expand {
+    height: 120px;
+  }
+  .input-wrap {
+    margin-top: 10px;
+  }
+
+  .pledge-content {
+    margin: 20px 20px 30px;
+  }
+
+  .modal-option-left {
+    position: relative;
+    right: 0rem;
+    top: 25px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .hero-button {
+    justify-content: center;
+  }
+
+  .container {
+    width: 90%;
+  }
+  .hero-button > button {
+    transform: scale(1);
+  }
+
+  .bookmark-button {
+    background: red;
+    width: max-content !important;
+    height: max-content !important;
+  }
+
+  .about-container {
+    padding: 2rem 1.2rem;
+  }
+
+  .bookmark-button > img {
+    width: 100%;
+  }
+
+  .bookmark-text {
+    display: none;
+  }
+
+  .contribution-tier {
+    align-items: flex-start;
+  }
+  .tier-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .modal {
+    width: 90%;
+  }
+
+  .text {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .pledge-amount {
+    font-size: 1em;
+  }
+
+  .tier-quantity-left {
+    font-size: 1.1em;
+  }
+  .select-tier-button {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .select-button {
+    height: 50px;
+  }
+  .thank-you-modal {
+    opacity: 0;
+    width: 90%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .thank-you-modal > h2 {
+    text-align: center;
+  }
 }
