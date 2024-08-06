@@ -1,22 +1,28 @@
-# Frontend Mentor - Crowdfunding product page
+# Frontend Mentor - Crowdfunding product page solution
 
-![Design preview for the Crowdfunding product page coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Crowdfunding product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/crowdfunding-product-page-7uvcZe7ZR). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+## Overview
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this crowdfunding product page and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout depending on their device's screen size
 - See hover states for interactive elements
@@ -25,72 +31,145 @@ Your users should be able to:
 - See the number of total backers increment by one after confirming a pledge
 - Toggle whether or not the product is bookmarked
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![](./screenshot.jpg)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+### Links
 
-## Building your project
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+## My process
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+### Built with
 
-## Deploying your project
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- OOP Based
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+### What I learned
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+- Dynamic UI Updates:
+  I learned how to dynamically update the user interface based on user interactions. For example, updating the progress bar and total money raised when a user confirms a pledge, and incrementing the number of total backers.
 
-## Create a custom `README.md`
+- Handling User Interactions:
+  Implementing hover states for interactive elements and managing selections for different pledge options helped me understand how to create a more engaging user experience.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+- Smooth Scrolling:
+  Implementing smooth scrolling to selected pledge options improved the usability of the modal window, enhancing the overall user experience.
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+- Conditional Rendering:
+  I learned how to conditionally render elements based on the product's stock levels, such as disabling containers and updating button text to "Out of Stock" when necessary.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+- Semantic HTML and Accessibility:
+  Using semantic HTML5 markup ensured that the structure of the document was meaningful, which is important for
+  both accessibility and SEO.
 
-## Submitting your solution
+- CSS Custom Properties and Flexbox:
+  Leveraging CSS custom properties for consistent theming and Flexbox for layout helped me create a responsive and maintainable design.
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+To see how you can add code snippets, see below:
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+```html
+<h1>Some HTML code I'm proud of</h1>
+```
 
-## Sharing your solution
+```css
+.proud-of-this-css {
+  color: papayawhip;
+}
+```
 
-There are multiple places you can share your solution:
+```js
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+  _initEventListeners() {
+    inputPledge.forEach((input) => {
+      input.addEventListener("input", this._validateInput.bind(this));
+    });
+    continueButton.forEach((button, index) => {
+      button.addEventListener("click", (e) => {
+        this._handleContinue(index, e);
+      });
+    });
+    gotItButton.addEventListener("click", this._clearWindow.bind(this));
+  }
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+  _updateStockUI() {
+    this.#AllStock.forEach((e, i) => {
+      if (
+        +productStock[i].innerText === 0 &&
+        +dialogueStock[i].innerText === 0
+      ) {
+        contributionTier[i].classList.add("disabled");
+        selectButton[i].classList.add("out-of-stock");
+        selectButton[i].textContent = "Out of Stock";
+        tierOptions[i + 1].classList.add("disabled");
+      } else {
+        contributionTier[i].classList.remove("disabled");
+        selectButton[i].classList.remove("out-of-stock");
+        selectButton[i].textContent = "Select Reward";
+        dialogueStock[i].classList.remove("disabled");
+      }
+    });
+  }
+```
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
-## Got feedback for us?
+**Note: Delete this note and the content within this section and replace with your own learnings.**
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+### Continued development
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+#### While I am satisfied with the current state of this project, there are a few areas I would like to focus on in future development:
 
-**Have fun building!** 🚀
+- Improving Accessibility:
+  Ensuring that the application is fully accessible to all users by adding ARIA roles, labels, and improving keyboard navigation.
+
+- Enhancing Performance:
+  Optimizing the performance of the application by minimizing render-blocking resources, using lazy loading for images, and reducing JavaScript payloads.
+
+- Advanced State Management:
+  Implementing more advanced state management techniques, possibly using a library like Redux, to handle complex state interactions more efficiently.
+
+- Refactoring Code:
+  Continuously refactoring the code to improve readability and maintainability, and adopting best practices such as the DRY (Don't Repeat Yourself) principle.
+
+- Responsive Design:
+  Further refining the responsive design to ensure that the layout looks great on all screen sizes, including very small and very large screens.
+
+- Backend Integration:
+  Exploring backend integration to handle pledges and stock updates in real-time, possibly using a framework like Node.js and a database like MongoDB.
+
+**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+
+### Useful resources
+
+- [Udemy Webdevlopment](https://www.udemy.com/share/101W9C3@2s1lShiGH32a3OJHMYullps9bvMmvxO_kykXK5ZGloqkGQDHawnryvbZtrMeQ8y81A==/)
+
+**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+
+## Author
+
+- Website - [Mitesh Panchal](https://miteshp98.github.io/portfolio-website/)
+- Frontend Mentor - [@miteshp98](https://www.frontendmentor.io/profile/miteshp98)
+- Linkedin - [@Mitesh Panchal](https://www.linkedin.com/in/mitesh-panchal-356558126/)
+  **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+
+## Acknowledgments
+
+Thanks to the challenge provider for creating this opportunity to apply and improve my frontend development skills.
+
+**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
