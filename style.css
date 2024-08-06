@@ -528,67 +528,6 @@ input::-webkit-inner-spin-button {
 } */
 
 /* Media query  */
-
-/* Afte Click Button Style Change CSS */
-
-.disabled {
-  pointer-events: none;
-  opacity: 0.5;
-  transition: all 0.5s ease-in-out;
-}
-
-.open {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-  pointer-events: all;
-}
-
-.active-border {
-  border-color: var(--Moderatecyan);
-}
-
-.active-color {
-  color: var(--Moderatecyan);
-}
-
-.clicked {
-  color: var(--Darkcyan);
-  background-color: #f2f2f2;
-}
-
-.back--active {
-  background: var(--Darkcyan);
-}
-
-.expand {
-  height: 100px;
-}
-
-.modal::-webkit-scrollbar {
-  display: none;
-  scrollbar-width: none;
-}
-
-.invalid {
-  border-color: red;
-}
-
-.out-of-stock {
-  background-color: var(--Darkgray) !important;
-}
-
-.error {
-  display: none;
-  margin-top: 1.5rem;
-  color: red;
-  font-size: 0.8em;
-  font-weight: 600;
-}
-
-.show-error {
-  display: block;
-}
-
 @media screen and (max-width: 1440px) {
   .total-amount,
   .total-count,
@@ -624,6 +563,12 @@ input::-webkit-inner-spin-button {
   }
 }
 
+@media screen and (max-width: 1114px) {
+  .modal {
+    width: 60%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .container {
     width: 75vw;
@@ -645,6 +590,9 @@ input::-webkit-inner-spin-button {
 @media screen and (max-width: 800px) {
   header {
     background: url(images/image-hero-mobile.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 2rem 25rem;
   }
 
   .container {
@@ -761,7 +709,7 @@ input::-webkit-inner-spin-button {
   }
 
   .expand {
-    height: 120px;
+    height: 120px !important;
   }
   .input-wrap {
     margin-top: 10px;
@@ -777,6 +725,7 @@ input::-webkit-inner-spin-button {
     top: 25px;
   }
 }
+
 @media screen and (max-width: 680px) {
   .hero-button {
     justify-content: center;
@@ -833,20 +782,109 @@ input::-webkit-inner-spin-button {
   .tier-quantity-left {
     font-size: 1.1em;
   }
+
   .select-tier-button {
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
   }
+
   .select-button {
     height: 50px;
   }
+
   .thank-you-modal {
     opacity: 0;
     width: 90%;
     transform: translate(-50%, -50%) scale(1);
   }
+
   .thank-you-modal > h2 {
     text-align: center;
   }
+}
+
+@media screen and (max-width: 400px) {
+  .back-button {
+    height: 50px !important;
+    font-size: 0.9em;
+  }
+  .select-button {
+    height: 45px;
+    font-size: 0.95em;
+  }
+  .modal {
+    padding-inline: 1.5rem;
+  }
+  .modal-option {
+    padding-inline: 1.5rem;
+  }
+  .pledge-content {
+    margin: 1.3rem 0;
+  }
+  .tier-quantity-left {
+    font-size: 0.95em;
+  }
+  .pledge-options {
+    font-size: 1em;
+  }
+}
+
+/* Afte Click Button Style Change CSS */
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  transition: all 0.5s ease-in-out;
+}
+
+.open {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: all;
+}
+
+.active-border {
+  border-color: var(--Moderatecyan);
+}
+
+.active-color {
+  color: var(--Moderatecyan);
+}
+
+.clicked {
+  color: var(--Darkcyan);
+  background-color: #f2f2f2;
+}
+
+.back--active {
+  background: var(--Darkcyan);
+}
+
+.expand {
+  height: 100px;
+}
+
+.modal::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
+
+.invalid {
+  border-color: red;
+}
+
+.out-of-stock {
+  background-color: var(--Darkgray) !important;
+}
+
+.error {
+  display: none;
+  margin-top: 1.5rem;
+  color: red;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.show-error {
+  display: block;
 }
