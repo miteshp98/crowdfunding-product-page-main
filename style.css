@@ -10,13 +10,13 @@
 :root {
   --Moderatecyan: hsl(176, 50%, 47%);
   --Darkcyan: hsl(176, 72%, 28%);
-
   --Black: hsl(0, 0%, 0%);
   --Darkgray: hsl(0, 0%, 48%);
 }
 
 body {
   width: 100%;
+  background-color: rgb(247, 247, 247);
 }
 
 /* Header Section */
@@ -26,6 +26,7 @@ header {
   background-size: cover;
   background-position: center;
   padding: 2rem 2rem 25rem;
+  filter: brightness(0.8);
 }
 
 .nav-toggle {
