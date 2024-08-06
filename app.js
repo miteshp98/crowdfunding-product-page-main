@@ -93,12 +93,11 @@ class CrowdFundApp {
   // Update the bookmark HTML with the given text
   _updateBookmark(text) {
     const html = `<img
-    src="images/icon-${text}.svg"
+    src="images/icon-${text.toLowerCase()}.svg"
     alt="bookmark icon"
     class="bookmark-icon"
   />
   <span class="bookmark-text">${text}</span>`;
-
     return html;
   }
 
