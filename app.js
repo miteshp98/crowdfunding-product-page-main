@@ -288,7 +288,7 @@ class PledgeInput extends CrowdFundApp {
       totalBackers.textContent = backerCount;
       totalFundsRaised.textContent = `$${totalAmount.toLocaleString()}`;
       progressBar.style.width = `${progressPercentage}%`;
-    }, 1500);
+    }, 1800);
   }
 
   // Sets the initial stock values in the UI
@@ -353,7 +353,10 @@ const app = new CrowdFundApp();
 
 toggleButton.addEventListener("click", function (e) {
   const icon = this.children[0];
+  toggleNavbar(icon);
+});
 
+function toggleNavbar(icon) {
   if (!nav.classList.contains("toggle")) {
     nav.classList.add("toggle");
     icon.src = "images/icon-close-menu.svg";
@@ -363,4 +366,4 @@ toggleButton.addEventListener("click", function (e) {
     icon.src = "images/icon-hamburger.svg";
     document.querySelector("body").style.overflow = "auto";
   }
-});
+}
